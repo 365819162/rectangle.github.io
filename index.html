@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>矩形计算器</title>
+    <link href="矩形样式.css" type="text/css " rel="stylesheet">
+    <script type="text/javascript">
+        var s = h * w;
+        var l = 2 * h + 2 * w;
+        function sl() {
+            var h  =  document.getElementById("height").value;//获取高度数值。
+            var w  =  document.getElementById("width").value;//获取宽度数值。
+            if (h <= 0 || w <=0 ) {
+                alert ("输入不合法，请重新输入。");
+            }//实在是一时半会搞不懂正则，只能出此下策让input用number。
+            else {
+                var l = 2 * h + 2 * w;
+                var s=h*w;
+                s=Math.round(s*100)/100;
+                console.log(s)
+                l=Math.round(l*100)/100;
+                console.log(l);
+                document.getElementById("long").value=l;//采用保留两位小数。
+                document.getElementById("size").value=s;//采用保留两位小数。
+
+            }}
+    </script>
+</head>
+<body>
+<div id="div1">
+    <div id="div2"><form class="form">
+       <label for="w" id="label"> 宽度：<input type="number"  name="宽度" value=""  id="width" placeholder="请输入数字" autofocus><span style="color:red;">*</span></label>
+
+       <label for="h" id="label"> 高度：<input type="number" name="高度" value=""  id="height" placeholder="请输入数字"><span style="color:red;">*</span></label>
+
+        <input type="button" value="计算" onclick="sl()" id="button">
+        <label  for="l"id="label"> 周长：<input type="text" name="周长" value="" readonly="readonly " id="long"></label>
+       <label for="s" id="label"> 面积：<input type="text" name="面积"   value=""  readonly="readonly"  id="size"></label>
+    </form></div>
+</div>
+</body>
+</html>

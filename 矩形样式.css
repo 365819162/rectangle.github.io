@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width:100%;
+    height:1000px;
+    background-image:linear-gradient(to top right,rgba(224,73,13,0.4),rgba(4,149,245,0.5));/*此处借鉴其他视频*/
+}
+#div1{
+   /*disolay:grad;
+    justify-content: center;
+    align-items:center;
+  margin: 100px;
+    height: 600px;
+background-color:red;
+    width:600px;*/
+    position: relative;
+    height: 400px;
+    width:400px;
+    margin: auto;
+}
+#div2{
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#label{
+    display:block;
+
+
+}
+.form input[type="number"], .form input[type="text"] {
+    padding:8px 10px;
+    width:180px;
+    outline:none;
+    margin:10px;
+
+}
+
+.form input[type="button"]{
+    display:block;
+    color:red;
+    margin:auto 58px;
+    width:40px;
+    height:35px;
+}
